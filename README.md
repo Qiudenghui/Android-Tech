@@ -16,3 +16,5 @@ Android技术归档
 [RecyclerView使用Demo](https://github.com/devilWwj/Android-Tech/tree/master/RecyclerViewDemo)
 
 [SwipeRefreshLayout使用Demo](https://github.com/devilWwj/Android-Tech/tree/master/SwipeRefreshLayoutDemo)
+
+[Android Studio制作.so库实践](https://github.com/devilWwj/Android-Tech/tree/master/JNIDemo)
