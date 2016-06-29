@@ -29,10 +29,22 @@ android {
     }
 }
 
+task makeJar(type: Copy) {
+    delete 'build/libs/devilwwj.jar'
+    from('build/intermediates/bundles/release/')
+    into('build/libs/')
+    include('classes.jar')
+    rename('classes.jar', 'devilwwj.jar')
 
+}
+
+makeJar.dependsOn(build)
+// 在终端执行生成JAR包
+// gradlew makdeJar
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile project(':mylib')
 }
