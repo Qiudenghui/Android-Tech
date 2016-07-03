@@ -7,14 +7,14 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:2.0.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:latest.release'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:latest.release'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
     }
 }
 allprojects {
     repositories {
         jcenter()
         maven {
-            url 'https://jalenchen.bintray.com/maven/'
+            url 'https://devilwwj.bintray.com/maven/'
         }
     }
 }

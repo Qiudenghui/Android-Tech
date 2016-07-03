@@ -1,9 +1,10 @@
 package com.devilwwj.crashlytics;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.appsee.Appsee;
 import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.ndk.CrashlyticsNdk;
 import com.devilwwj.jni.TestJNI;
@@ -19,14 +20,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
         setContentView(R.layout.activity_main);
+        Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
 
-//        testJavaCrash();
-//        testNativeCrash();
-        testANRCrash();
+        Appsee.start(getString(R.string.com_appsee_apikey));
+        try {
+//            testJavaCrash();
+        testNativeCrash();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+//        testANRCrash();
     }
-
 
 
     public void testJavaCrash() {
