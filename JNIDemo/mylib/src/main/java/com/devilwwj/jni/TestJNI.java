@@ -10,4 +10,6 @@ public class TestJNI {
     public native void destory();
 
     public native void createANativeCrash();
+
+    public native void createANativeCrash2();
 }

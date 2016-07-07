@@ -41,5 +41,7 @@ Java_com_devilwwj_jni_TestJNI_createANativeCrash(JNIEnv *env, jobject instance) 
     // TODO 制造一个native crash
     int *p = 0; // 空指针
     *p = 1; // 写空指针指向的内存，产生SIGSEGV信号，造成crash
-
+    if (pCAdd != NULL) {
+       pCAdd->Divide(12, 0);
+    }
 }

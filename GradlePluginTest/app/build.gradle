@@ -7,14 +7,23 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.bugly.plugin:devilwwjplugin:1.0.0'
+        classpath 'com.bugly.plugin:devilwwjplugin:1.0.4'
     }
 }
 
 
 apply plugin: 'com.android.application'
 apply plugin: 'groovyx.grooid.groovy-android'
-apply plugin: 'plugin.test'
+apply plugin: 'betauploader'
+
+beta {
+    appId = '900037672'
+    appKey = 'bQvYLRrBNiqUctfi'
+    title = "test2"
+    desc = "中文描述2"
+    sourceFile = "D:/bugly-release.apk"
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"

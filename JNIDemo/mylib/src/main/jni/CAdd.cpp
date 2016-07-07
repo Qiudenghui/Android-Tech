@@ -15,3 +15,7 @@ CAdd::~CAdd() {
 int CAdd::Add(int x, int y) {
     return x + y;
 }
+
+void CAdd::Divide(int x, int y) {
+    x / y;
+}

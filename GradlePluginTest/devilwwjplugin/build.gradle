@@ -1,6 +1,6 @@
 apply plugin: 'groovy'
 apply plugin: 'maven'
-apply from: '../bintray.gradle'
+//apply from: '../bintray.gradle'
 dependencies {
     compile gradleApi()
     compile localGroovy()
@@ -9,8 +9,8 @@ dependencies {
 repositories {
     mavenCentral()
 }
-//group = 'com.bugly.plugin'
-//version = '1.0.0'
+group = 'com.bugly.plugin'
+version = '1.0.4'
 
 uploadArchives {
     repositories {

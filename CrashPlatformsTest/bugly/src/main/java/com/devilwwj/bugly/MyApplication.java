@@ -1,6 +1,7 @@
 package com.devilwwj.bugly;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.tencent.bugly.crashreport.CrashReport;
 
@@ -13,6 +14,9 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        CrashReport.initCrashReport(this.getApplicationContext(), "900029763", true);
+        long start = System.currentTimeMillis();
+        CrashReport.initCrashReport(this.getApplicationContext(), "900037672", true);
+        long end = System.currentTimeMillis();
+        Log.e("time:", (end - start) + "");
     }
 }
