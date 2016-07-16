@@ -3,7 +3,7 @@ package com.devilwwj.uploadlibtojcenter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.devilwwj.utils.MyUtils;
+import com.devilwwj.library.MyUtils;
 
 public class MainActivity extends AppCompatActivity {
 

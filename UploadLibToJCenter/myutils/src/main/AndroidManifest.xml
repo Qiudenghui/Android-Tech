@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.devilwwj.utils">
+    package="com.devilwwj.library">
 
     <application
         android:allowBackup="true"

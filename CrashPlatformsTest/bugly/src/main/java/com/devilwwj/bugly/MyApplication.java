@@ -13,6 +13,6 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        CrashReport.initCrashReport(this.getApplicationContext(), "900029763", true);
+        CrashReport.initCrashReport(this.getApplicationContext(), "900037672", true);
     }
 }

@@ -3,6 +3,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 // 这个version是区分library版本的，因此当我们需要更新library时记得修改这个version
 version = "1.0.0"
+
 android {
     compileSdkVersion 19
     buildToolsVersion "23.0.3"
@@ -30,7 +31,7 @@ dependencies {
 
 def siteUrl = 'https://github.com/devilWwj/Android-Tech'      // 项目的主页
 def gitUrl = 'https://github.com/devilWwj/Android-Tech.git'   // Git仓库的url
-group = "com.devilwwj.utils" // Maven Group ID for the artifact，一般填你唯一的包名
+group = "com.devilwwj.library" // Maven Group ID for the artifact，一般填你唯一的包名
 install {
     repositories.mavenInstaller {
         // This generates POM.xml with proper parameters
@@ -38,6 +39,7 @@ install {
             project {
                 packaging 'aar'
                 // Add your description here
+                description 'my utils for test'
                 name 'Android Commonly used utils'  //项目描述
                 url siteUrl
                 // Set your license
@@ -49,7 +51,7 @@ install {
                 }
                 developers {
                     developer { // 开发者信息
-                        id 'wenjiewu'
+                        id 'devilwwj'
                         name 'devilwwj'
                         email '659982592@qq.com'
                     }
@@ -81,6 +83,7 @@ artifacts {
     archives sourcesJar
 }
 Properties properties = new Properties()
+// 加载本地配置
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
     user = properties.getProperty("bintray.user")
@@ -88,7 +91,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"  //发布到Bintray的那个仓库里，默认账户有四个库，我们这里上传到maven库
-        name = "utils"  //发布到Bintray上的项目名字
+        name = "myutils"  //发布到Bintray上的项目名字
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]

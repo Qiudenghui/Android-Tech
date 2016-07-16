@@ -1,4 +1,4 @@
-package com.devilwwj.utils;
+package com.devilwwj.library;
 
 /**
  * Created by wenjiewu on 2016/6/6.

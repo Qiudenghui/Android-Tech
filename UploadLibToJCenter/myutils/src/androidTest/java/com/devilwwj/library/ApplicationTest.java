@@ -1,4 +1,4 @@
-package com.devilwwj.utils;
+package com.devilwwj.library;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
