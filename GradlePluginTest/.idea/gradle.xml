@@ -5,6 +5,25 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+=======
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/devilwwjplugin" />
+            <option value="$PROJECT_DIR$/plugin" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/devilwwjplugin" />
+            <option value="$PROJECT_DIR$/plugin" />
+          </set>
+        </option>
+>>>>>>> 047cf943e0fe285d40e3d86f4cf339237f3fd3f4
       </GradleProjectSettings>
     </option>
   </component>

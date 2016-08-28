@@ -3,6 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GradlePluginTest.iml" filepath="$PROJECT_DIR$/GradlePluginTest.iml" />
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/devilwwjplugin/devilwwjplugin.iml" filepath="$PROJECT_DIR$/devilwwjplugin/devilwwjplugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugin/plugin.iml" filepath="$PROJECT_DIR$/plugin/plugin.iml" />
+>>>>>>> 047cf943e0fe285d40e3d86f4cf339237f3fd3f4
     </modules>
   </component>
 </project>

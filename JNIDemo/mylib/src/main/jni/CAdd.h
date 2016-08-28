@@ -14,6 +14,8 @@ public:
 
     int Add(int x, int y);
 
+    void Divide(int x, int y);
+
 };
 
 

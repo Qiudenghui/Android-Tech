@@ -13,30 +13,48 @@ import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
 
-    static {
-        System.loadLibrary("mylib");
-    }
+//    static {
+//        System.loadLibrary("mylib");
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        long start = System.currentTimeMillis();
         Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
+        long end = System.currentTimeMillis();
+        Log.e("time:", (end - start) + "");
 
-        Appsee.start(getString(R.string.com_appsee_apikey));
-        try {
-//            testJavaCrash();
-        testNativeCrash();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-//        testANRCrash();
+
+//        Appsee.start(getString(R.string.com_appsee_apikey));
+        // 自定义log
+//        Crashlytics.log("Higgs-Boson detected! Bailing out...");
+//        // 自定义key
+//        Crashlytics.setInt("current_level", 3);
+//        Crashlytics.setString("last_UI_action", "fffff");
+//
+//
+//        testNativeCrash();
     }
 
 
     public void testJavaCrash() {
         throw new RuntimeException(
                 "This Crash create for Test! You can go to Bugly see more detail!");
+
+    }
+
+    public void testNull() {
+        Object obj = null;
+        obj.toString();
+    }
+
+    public static void createIndexOutOfBoundsException() {
+        String[] strs = new String[2];
+        strs[0] = "123";
+        strs[1] = "456";
+        strs[2] = "789"; // 这里数组越界了
     }
 
     /**

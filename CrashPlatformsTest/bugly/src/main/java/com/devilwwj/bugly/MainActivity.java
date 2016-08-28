@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        testNativeCrash();
+//        testNativeCrash();
+//        createIndexOutOfBoundsException();
     }
 
 
@@ -49,5 +50,12 @@ public class MainActivity extends AppCompatActivity {
     public void testNativeCrash() {
         TestJNI testJNI = new TestJNI();
         testJNI.createANativeCrash();
+    }
+
+    public static void createIndexOutOfBoundsException() {
+        String[] strs = new String[2];
+        strs[0] = "123";
+        strs[1] = "456";
+        strs[2] = "789"; // 这里数组越界了
     }
 }
